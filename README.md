@@ -523,3 +523,133 @@ Built as a local AI/RAG project for experimenting with:
 * Document processing
 * Python
 * AI/ML
+
+## Running the Application
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/chat-with-files.git
+cd chat-with-files
+```
+
+### 2. Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### 3. Activate the Virtual Environment
+
+On Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+You should see `(venv)` at the beginning of your terminal prompt.
+
+### 4. Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 5. Install and Set Up Ollama
+
+Download and install Ollama from:
+
+https://ollama.com/
+
+Then download the local language model:
+
+```bash
+ollama pull qwen3:4b
+```
+
+Verify that the model is installed:
+
+```bash
+ollama list
+```
+
+You should see:
+
+```text
+qwen3:4b
+```
+
+### 6. Run the Application
+
+Make sure the virtual environment is activated:
+
+```bash
+venv\Scripts\activate
+```
+
+Then start the application:
+
+```bash
+python app.py
+```
+
+### 7. Select a Folder
+
+A Windows folder-selection dialog will open.
+
+Select the folder you want to analyze.
+
+The application will recursively scan the selected folder and process all supported files.
+
+### 8. Ask Questions
+
+After the folder has been indexed, you can ask questions about its contents.
+
+Example:
+
+```text
+What is this project about?
+```
+
+```text
+What programming languages are used?
+```
+
+```text
+Explain the main Python file.
+```
+
+```text
+What algorithms are used in this project?
+```
+
+```text
+Summarize the documents in this folder.
+```
+
+The system retrieves relevant information from the files and uses the local Qwen3 model to generate an answer.
+
+### 9. Exit the Application
+
+Type:
+
+```text
+exit
+```
+
+and press Enter.
+
+---
+
+## Quick Start
+
+After the initial installation, simply run:
+
+```bash
+venv\Scripts\activate
+python app.py
+```
+
+Then:
+
+**Select Folder → Wait for Analysis → Ask Questions**
